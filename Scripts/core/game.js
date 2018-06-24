@@ -15,12 +15,12 @@
         Main();
     }
     function Update() {
-        helloLable.rotation -= 5; //second
+        // helloLable.rotation = +5;  //second
         stage.update(); //redraws the stage
     }
     function Main() {
         console.log("Game Started...");
-        helloLable = new createjs.Text("Hello, World", "40px Consolas", "#000000");
+        helloLable = new createjs.Text("Heo0, World", "40px Consolas", "#000000");
         helloLable.x = 100;
         helloLable.y = 100;
         stage.addChild(helloLable);
