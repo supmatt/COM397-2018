@@ -5,14 +5,14 @@ module objects{
         //Public Properties
 
         //Constructor
-        constructor(imagePath:string, x:number =0, y:number = 0){
+        constructor(imagePath:string, x:number = 0, y:number = 0){
             super(imagePath);
 
             this.x = x;
             this.y = y;
 
             this.on("mouseover", this._mouseOver);
-            this.on("mouseOut", this._mouseOut)
+            this.on("mouseout", this._mouseOut);
         }
         //Private Methods
         private _mouseOver():void{

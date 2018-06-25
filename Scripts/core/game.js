@@ -1,4 +1,4 @@
-/// <reference path ="_references.ts"/>
+/// <reference path ="_references.js"/>
 // IIFE - Immediately Invoked Function Expression
 (function () {
     var canvas = document.getElementById("canvas");

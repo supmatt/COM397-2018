@@ -1,5 +1,3 @@
-/// <reference path ="_references.ts"/>
-
 // IIFE - Immediately Invoked Function Expression
 (function(){
 let canvas = document.getElementById("canvas");
@@ -59,8 +57,7 @@ let clickMeButton: objects.Button;
 
         // clickMeButton = new createjs.Bitmap(
         //     "./Assets/images/clickMeButton.png");
-        clickMeButton = new objects.Button(
-            "./Assets/images/clickMeButton.png",320,340);
+        clickMeButton = new objects.Button("./Assets/images/clickMeButton.png",320,340);
         clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
         clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
         // clickMeButton.x =320;
@@ -70,10 +67,7 @@ let clickMeButton: objects.Button;
         // clickMeButton.on("mouseover", clickMeButtonMouseOver);
         // clickMeButton.on("mouseout", clickMeButtonMouseOut);
         clickMeButton.on("click", clickMeButtonClick);
-
-        
-
-        
+  
     }
 
     window.onload = Init;
