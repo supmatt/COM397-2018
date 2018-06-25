@@ -8,8 +8,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var object;
-(function (object) {
+var objects;
+(function (objects) {
     var Button = /** @class */ (function (_super) {
         __extends(Button, _super);
         //Private Instance Variables
@@ -34,6 +34,6 @@ var object;
         };
         return Button;
     }(createjs.Bitmap));
-    object.Button = Button;
-})(object || (object = {}));
+    objects.Button = Button;
+})(objects || (objects = {}));
 //# sourceMappingURL=button.js.map

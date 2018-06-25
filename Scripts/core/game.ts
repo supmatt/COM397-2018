@@ -4,7 +4,8 @@ let canvas = document.getElementById("canvas");
 let stage:createjs.Stage;
 // let helloLable:createjs.Text;
 let helloLable:objects.Lable;
-let clickMeButton: createjs.Bitmap;
+// let clickMeButton: createjs.Bitmap;
+let clickMeButton: objects.Button;
 
     function Init():void{
         console.log("Initialization Started");
@@ -28,12 +29,12 @@ let clickMeButton: createjs.Bitmap;
         // helloLable.rotation += 3;  //second
         stage.update();//redraws the stage
     }
-    function clickMeButtonMouseOver():void{
-        clickMeButton.alpha = 0.7;
-    }
-    function clickMeButtonMouseOut():void{
-        clickMeButton.alpha = 1.0;
-    }
+    // function clickMeButtonMouseOver():void{
+    //     clickMeButton.alpha = 0.7;
+    // }
+    // function clickMeButtonMouseOut():void{
+    //     clickMeButton.alpha = 1.0;
+    // }
     function clickMeButtonClick():void{
         helloLable.text = "Clicked!";
         helloLable.regX = helloLable.getMeasuredWidth()*0.5;
@@ -54,16 +55,18 @@ let clickMeButton: createjs.Bitmap;
         // helloLable.y = 200;
         stage.addChild(helloLable);
 
-        clickMeButton = new createjs.Bitmap(
-            "./Assets/images/clickMeButton.png");
-        // clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
-        // clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
+        // clickMeButton = new createjs.Bitmap(
+        //     "./Assets/images/clickMeButton.png");
+        clickMeButton = new objects.Button(
+            "./Assets/images/clickMeButton.png",320,340);
+        clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
+        clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
         // clickMeButton.x =320;
         // clickMeButton.y =340;
         stage.addChild(clickMeButton);
 
-        clickMeButton.on("mouseover", clickMeButtonMouseOver);
-        clickMeButton.on("mouseout", clickMeButtonMouseOut);
+        // clickMeButton.on("mouseover", clickMeButtonMouseOver);
+        // clickMeButton.on("mouseout", clickMeButtonMouseOut);
         clickMeButton.on("click", clickMeButtonClick);
 
         
