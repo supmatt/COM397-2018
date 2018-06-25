@@ -2,7 +2,9 @@
 (function(){
 let canvas = document.getElementById("canvas");
 let stage:createjs.Stage;
-let helloLable:createjs.Text;
+// let helloLable:createjs.Text;
+let helloLable:objects.Lable;
+let clickMeButton: createjs.Bitmap;
 
     function Init():void{
         console.log("Initialization Started");
@@ -20,23 +22,30 @@ let helloLable:createjs.Text;
         Main();
     }
     function Update():void{
-        helloLable.rotation += 3;  //second
+        // helloLable.rotation += 3;  //second
         stage.update();//redraws the stage
     }
     function Main(){
         console.log("Game Started...");
 
-        helloLable = new createjs.Text("WHeo0, World", 
-        "40px Consolas", "#000000" );
-
-        helloLable.regX = helloLable.getMeasuredWidth()  *0.5;
-        helloLable.regY = helloLable.getMeasuredHeight()  *0.5;
+        // helloLable = new createjs.Text("WHeo0, World", 
+        // "40px Consolas", "#000000" );
+        helloLable = new objects.Lable("WHeo0, World", 
+        "40px", "Consolas", "#000000", 320, 240, true );
+        // helloLable.regX = helloLable.getMeasuredWidth()  *0.5;
+        // helloLable.regY = helloLable.getMeasuredHeight()  *0.5;
         
-
-        helloLable.x = 320;
-        helloLable.y = 200;
-
+        // helloLable.x = 320;
+        // helloLable.y = 200;
         stage.addChild(helloLable);
+
+        clickMeButton = new createjs.Bitmap(
+            "./Assets/images/clickMeButton.png");
+        clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
+        clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
+        clickMeButton.x =320;
+        clickMeButton.y =340;
+        stage.addChild(clickMeButton);
     }
 
     window.onload = Init;
