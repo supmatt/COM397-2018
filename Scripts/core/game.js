@@ -1,4 +1,3 @@
-/// <reference path ="_references.js"/>
 // IIFE - Immediately Invoked Function Expression
 (function () {
     var canvas = document.getElementById("canvas");
@@ -38,7 +37,7 @@
         console.log("Game Started...");
         // helloLable = new createjs.Text("WHeo0, World", 
         // "40px Consolas", "#000000" );
-        helloLable = new objects.Lable("WHeo0, World", "40px", "Consolas", "#000000", 320, 240, true);
+        helloLable = new objects.Lable("Hello0, World", "40px", "Consolas", "#000000", 320, 240, true);
         // helloLable.regX = helloLable.getMeasuredWidth()  *0.5;
         // helloLable.regY = helloLable.getMeasuredHeight()  *0.5;
         // helloLable.x = 320;
