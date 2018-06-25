@@ -56,10 +56,10 @@ let clickMeButton: createjs.Bitmap;
 
         clickMeButton = new createjs.Bitmap(
             "./Assets/images/clickMeButton.png");
-        clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
-        clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
-        clickMeButton.x =320;
-        clickMeButton.y =340;
+        // clickMeButton.regX = clickMeButton.getBounds().width * 0.5;
+        // clickMeButton.regY = clickMeButton.getBounds().height * 0.5;
+        // clickMeButton.x =320;
+        // clickMeButton.y =340;
         stage.addChild(clickMeButton);
 
         clickMeButton.on("mouseover", clickMeButtonMouseOver);
