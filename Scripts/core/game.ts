@@ -17,6 +17,9 @@ let clickMeButton: createjs.Bitmap;
         console.log("Starting Application...");
 
         stage = new createjs.Stage(canvas);
+
+        stage.enableMouseOver(20); //turn this on the button
+
         createjs.Ticker.framerate = 60; //60FPS
         createjs.Ticker.on("tick", Update);
         Main();
@@ -25,6 +28,18 @@ let clickMeButton: createjs.Bitmap;
         // helloLable.rotation += 3;  //second
         stage.update();//redraws the stage
     }
+    function clickMeButtonMouseOver():void{
+        clickMeButton.alpha = 0.7;
+    }
+    function clickMeButtonMouseOut():void{
+        clickMeButton.alpha = 1.0;
+    }
+    function clickMeButtonClick():void{
+        helloLable.text = "Clicked!";
+        helloLable.regX = helloLable.getMeasuredWidth()*0.5;
+        helloLable.regY = helloLable.getMeasuredHeight()*0.5;
+    }
+        
     function Main(){
         console.log("Game Started...");
 
@@ -46,6 +61,14 @@ let clickMeButton: createjs.Bitmap;
         clickMeButton.x =320;
         clickMeButton.y =340;
         stage.addChild(clickMeButton);
+
+        clickMeButton.on("mouseover", clickMeButtonMouseOver);
+        clickMeButton.on("mouseout", clickMeButtonMouseOut);
+        clickMeButton.on("click", clickMeButtonClick);
+
+        
+
+        
     }
 
     window.onload = Init;
